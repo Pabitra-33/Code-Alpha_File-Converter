@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Converter</title>
+    <!-- CSS file-->
+    <link rel="stylesheet" href="File.css">
+    
+</head>
+<body>
+     <div class="container">
+
+        <!-- image show -->
+        <img id="showImg"> 
+
+        <!--button-->
+        <div class="button">
+            <div class="upload">
+                <input type="file" onchange="loadFile(event)" name="" accept=".png, .jpg, .jpeg">Upload Image
+            </div>
+            <button onclick = "pdfDown()">Download as PDF</button>
+        </div>
+     </div>
+
+     <!--jspdf cdn-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+
+     <!--Javascript part-->
+    <script>
+        var newImage, showImg;
+
+        function loadFile(event){
+          showImg = document.getElementById('showImg');
+          showImg.src = URL.createObjectURL(event.target.files[0]);
+
+          newImage = document.createElement('img');
+          newImage.src = URL.createObjectURL(event.target.files[0]);
+    
+          showImg.onload = function(){
+          URL.revokeObjectURL(showImg.src) //free memeory
+          }
+        };
+
+       //download pdf
+       
+       function pdfDown() {
+          console.log(newImage)
+          var doc = new jsPDF();
+          doc.addImage(newImage, 10,10);
+          doc.save('ImageToPDF.pdf') //rename that pdf
+        }
+    </script>
+    
+</body>
+</html>

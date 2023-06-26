@@ -1,0 +1,68 @@
+*,*:after,*:before{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* --styling the body of background-- */
+body{
+    font-family: arial;
+    font-size: 16px;
+    margin: 0;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(133deg, #4abeb2, #3c57d2);
+}
+/* --styling the container class-- */
+.container{
+    width: 450px;
+    padding: 30px;
+    background:#ffff;
+    border-radius: 5px;
+}
+/* --styling the Img shown part of the body-- */
+#showImg{
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    min-width: 200px;
+    background: #174353;
+    border-radius: 5px;
+}
+/* --setting height and width of the image-- */
+img{
+    width: 100%;
+    height: 100%;
+}
+/* --styling the button view-- */
+.button{
+    display: flex;
+}
+button,.upload{
+    width: 220px;
+    margin: 50px 20px 10px 20px;
+    text-align: center;
+    position: relative;
+    padding: 10px 5px;
+    font-size: 17px;
+    background-color: #023780;
+    color: #fff;
+    display: block;
+    border-radius: 5px;
+    outline: none;
+}
+input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+.upload{
+    background-color: #a74901;
+}
