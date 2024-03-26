@@ -1,2 +1,2 @@
 # Code-Alpha_File-Converter
-Developed a simple file converter using html,css &amp; javascript that allows users to convert image files to pdf file in a very simple approach.
+Developed a simple file converter using HTML5, CSS3 &amp; JavaScript that allows users to convert image files to pdf file in a very simple approach.
